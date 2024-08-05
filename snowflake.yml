@@ -1,0 +1,17 @@
+
+definition_version: 1
+native_app:
+   name: geospatial_native_app
+   source_stage: stage_content.geospatial_native_app_stage
+   artifacts:
+      - src: app/*
+        dest: ./
+      - python/app.py
+      - streamlit/geospatial_app.py
+   package:
+      name: geospatial_native_app_package
+      scripts:
+         - scripts/app_content.sql
+   application:
+      name: geospatial_native_app
+      debug: false
